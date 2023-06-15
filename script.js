@@ -31,10 +31,16 @@ Book.prototype.read = function(){
     this.isRead = true;
 }
 
+Book.prototype.cover = "Paper";
+
 const LOTR = new Book("Lord of the Ring", "Tolkien");
 LOTR.read();
 console.log(LOTR);
+console.log(LOTR.cover);
+console.log(LOTR.hasOwnProperty("cover")); //false
+console.log(LOTR.hasOwnProperty("author")); //true
 
-console.log(LOTR.__proto__);
-console.log(LOTR.__proto__ === Book.prototype);
-console.log(Book.prototype.isPrototypeOf(LOTR));
+//console.log(LOTR.__proto__);
+//console.log(LOTR.__proto__ === Book.prototype);
+//console.log(Book.prototype.isPrototypeOf(LOTR));
+

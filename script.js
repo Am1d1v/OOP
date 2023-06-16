@@ -44,3 +44,12 @@ console.log(LOTR.hasOwnProperty("author")); //true
 //console.log(LOTR.__proto__ === Book.prototype);
 //console.log(Book.prototype.isPrototypeOf(LOTR));
 
+//==================================================
+
+
+const someBook = function(title, author){
+        this.author = author;
+        this.title = title;
+};
+
+const LOTRBook = new someBook("someTitle", "bookAuthor");

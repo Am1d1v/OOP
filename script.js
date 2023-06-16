@@ -52,4 +52,12 @@ const someBook = function(title, author){
         this.title = title;
 };
 
+someBook.prototype.isRead = false;
+
 const LOTRBook = new someBook("someTitle", "bookAuthor");
+console.log(LOTRBook);
+console.log(someBook.prototype.__proto__);
+console.log(LOTRBook.isRead);
+
+console.log(LOTRBook.hasOwnProperty("title"));
+console.log(LOTRBook.hasOwnProperty("isRead"));
